@@ -11,8 +11,14 @@ makeCacheMatrix <- function(x = matrix()){
   list(set = set, get = get, setInversa = setInversa, getInversa = getInversa)
 }
 
-x<-makeCacheMatrix(matrix((1:4),  nrow = 2, ncol = 2))
-x$get()
+x<-makeCacheMatrix(matrix((1:4),  nrow = 2, ncol# # La función makeCacheMatrix almacena en caché la inversa de una matriz y la función
+# # cacheSolve calcula la inversa de la matriz
+
+# # La siguiente función makeCacheMatrix crea un objeto "matriz" especial que puede
+# # caché su inverso.
+
+# # La siguiente función cacheSolve calcula la inversa de la "matriz" especial
+# # devuelto por makeCacheMatrix arriba.
 
 cacheSolve <- function(x, ...) {
   inversa <- x$getInversa()
